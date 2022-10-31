@@ -1,23 +1,16 @@
 def read_file(archi):
-    bolsa= []
     dic_bolsa = {}
     with open(archi, 'r', encoding = 'utf-8') as file:
         for elementos in file:
-            lineas_bolsa = elementos.strip('\n').split(',')
-            
-        
+            h, a, o, i, l = elementos.strip('\n').split(',')
+            dic_bolsa[h] = a, o, i, l
+            print(dic_bolsa)
+
+diccionario = read_file('bolsa.csv')   
 archi = 'bolsa.csv'
-print(read_file(archi))
+print(diccionario)
 
+def monthly_average(accion = 'SATL', diccionario):
+ fechas, promedios_mes = monthly_average("SATL", diccionario)
 
-def max_sueldo(la):
-    dic = 0
-    p =''
-    with open(la, 'r', encoding = 'utf-8') as file:
-        for x in file:
-            linea= x.strip().split(',')
-            print(linea)
-            if float(linea[1]) > dic:
-                dic = float(linea[1])
-                p = linea[0]
-    return [p,dic]
+ 
