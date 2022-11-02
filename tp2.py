@@ -15,18 +15,28 @@ def read_file(archi):
     return dic_bolsa
 
 diccionario = read_file('bolsa.csv')   
-print(diccionario)
+# print(diccionario)
+
 def monthly(accion, diccionario):
-    
+    lista = []
+    for index in diccionario['Date']:  
+        if index[5] == '1' and index[6] == '0': 
+            if accion in diccionario.keys():
+                
+                
 
-# def monthly_average(diccionario, accion):
-#     for x in diccionario:
-#         if
+            #  for x in diccionario["SATL"]:
+            #   print(x) 
+       
+                 print(x) 
+        
+         
+        
+        for x in accion:
+             
+
+accion = "SATL"
+print(monthly(accion, diccionario))
 
 
-#  fechas, promedios_mes = monthly_average("SATL", diccionario)
 
-
-# QUE tinee que devolver el dic 
-# Como uso lo que ponen en el tp
- 
