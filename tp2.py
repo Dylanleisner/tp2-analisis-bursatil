@@ -16,25 +16,18 @@ def read_file(archi):
 
 diccionario = read_file('bolsa.csv')   
 # print(diccionario)
-
+mes1=10
 def monthly(accion, diccionario):
     lista = []
-    for index in diccionario['Date']:  
-        if index[5] == '1' and index[6] == '0': 
-            if accion in diccionario.keys():
-                
-                
+    for index, fechas in enumerate(diccionario['Date']):
+        if fechas[5:6]=="10":
+            lista+=accion[fechas][index]
 
-            #  for x in diccionario["SATL"]:
-            #   print(x) 
-       
-                 print(x) 
         
+        
+
+    
          
-        
-        for x in accion:
-             
-
 accion = "SATL"
 print(monthly(accion, diccionario))
 
