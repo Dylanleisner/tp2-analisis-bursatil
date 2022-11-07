@@ -21,7 +21,10 @@ def monthly(accion, diccionario):
     lista = []
     for index, fechas in enumerate(diccionario["Date"]):
         if fechas[5]=="1" and fechas[6]=="0":
-            print(fechas)
+            
+    
+
+
                 
 
      
