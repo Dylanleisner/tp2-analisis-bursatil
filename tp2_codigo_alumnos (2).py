@@ -71,7 +71,10 @@ def read_file(archi):
         for x in file:
             info = x.strip().split(',')
             for key, val in zip(titulos, info):
-                dic_bolsa[key].append(val)
+                if key!="Date":
+                    dic_bolsa[key].append(float(val))
+                else:
+                    dic_bolsa[key].append(val)
     return dic_bolsa
 
 diccionario = read_file('bolsa.csv')   
@@ -81,8 +84,9 @@ def monthly(accion, diccionario):
     lista = []
     for index, fechas in enumerate(diccionario["Date"]):
         if fechas[5]=="1" and fechas[6]=="0":
-            lista+=diccionario[accion][index]
-    print(lista)
+            lista.append(diccionario[accion][index])
+            precio= sum(lista)/len(lista)
+    return fechas,precio
             
 
         
