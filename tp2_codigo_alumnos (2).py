@@ -83,16 +83,20 @@ mes1=10
 def monthly(accion, diccionario):
     lista = []
     lista_fechas = str2datetime(diccionario["Date"])
+    print(lista_fechas)
     for index, fechas in enumerate(lista_fechas):
-        print(fechas.month)
-    #     if fechas[5]=="1" and fechas[6]=="0":
-    #         lista.append(diccionario[accion][index])
-    #         precio= sum(lista)/len(lista)
-    # return fechas,precio
-    
-fecha = datetime.strptime
+        fechas = fechas.month 
+        lista.append(lista_fechas[accion][index])
+        print(lista)
+
+            
 
         
+    #     if fechas[5]=="1" and fechas[6]=="0":
+    #         
+    # return fechas,precio
+    
+
 accion = "SATL"
 print(monthly(accion, diccionario))
 
