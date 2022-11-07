@@ -19,15 +19,15 @@ diccionario = read_file('bolsa.csv')
 mes1=10
 def monthly(accion, diccionario):
     lista = []
-    for index, fechas in enumerate(diccionario['Date']):
-        if fechas[5:6]=="10":
-            lista+=accion[fechas][index]
+    for index, fechas in enumerate(diccionario["Date"]):
+        if fechas[5]=="1" and fechas[6]=="0":
+            print(fechas)
+                
 
+     
         
-        
-
-    
          
+        
 accion = "SATL"
 print(monthly(accion, diccionario))
 
