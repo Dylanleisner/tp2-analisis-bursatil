@@ -79,15 +79,49 @@ def read_file(archi):
 
 diccionario = read_file('bolsa.csv')   
 # print(diccionario)
-mes1=10
+lista = []
+lista11 = []
 def monthly(accion, diccionario):
-    lista = []
-    lista_fechas = str2datetime(diccionario["Date"])
-    print(lista_fechas)
-    for index, fechas in enumerate(lista_fechas):
-        fechas = fechas.month 
-        lista.append(lista_fechas[accion][index])
-        print(lista)
+ lista_fechas = str2datetime(diccionario["Date"])
+ for index, fechas in enumerate(lista_fechas):
+    #  print(index, fechas)
+     mes = fechas.month
+     if mes == 10:
+        lista.append(diccionario[accion][index])
+        promedio = sum(lista)/len(lista)
+        return promedio
+        continue
+     elif mes == 11:
+        lista11.append(diccionario[accion][index])
+        promedio11 = sum(lista11)/len(lista11)
+        return promedio11
+
+
+
+    
+    # lista = []
+    
+    #     lista = lista.append(accion)
+    #     print(lista)
+        
+        
+        
+
+    #  diccionario[accion]
+
+        
+        #    lista = lista.append(diccionario[oa])
+        #  print(lista)
+        
+            # if x in range(0, 19):
+            #     lista = lista.append(oa)
+            #     print(lista)
+    
+        
+
+        # fechas = fechas.month 
+        # lista.append(lista_fechas[accion][index])
+        # print(lista)
 
             
 
