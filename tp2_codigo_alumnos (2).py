@@ -89,46 +89,17 @@ def monthly(accion, diccionario):
      if mes == 10:
         lista.append(diccionario[accion][index])
         promedio = sum(lista)/len(lista)
-        return promedio
-        continue
+        print(promedio)
      elif mes == 11:
-        lista11.append(diccionario[accion][index])
-        promedio11 = sum(lista11)/len(lista11)
-        return promedio11
+            lista11.append(diccionario[accion][index])
+            promedio11 = sum(lista11)/len(lista11)
+            return promedio11
+    #  elif mes == 12:
+    #         lista11.append(diccionario[accion][index])
+    #         promedio11 = sum(lista11)/len(lista11)
+    #         return promedio11
 
 
-
-    
-    # lista = []
-    
-    #     lista = lista.append(accion)
-    #     print(lista)
-        
-        
-        
-
-    #  diccionario[accion]
-
-        
-        #    lista = lista.append(diccionario[oa])
-        #  print(lista)
-        
-            # if x in range(0, 19):
-            #     lista = lista.append(oa)
-            #     print(lista)
-    
-        
-
-        # fechas = fechas.month 
-        # lista.append(lista_fechas[accion][index])
-        # print(lista)
-
-            
-
-        
-    #     if fechas[5]=="1" and fechas[6]=="0":
-    #         
-    # return fechas,precio
     
 
 accion = "SATL"
