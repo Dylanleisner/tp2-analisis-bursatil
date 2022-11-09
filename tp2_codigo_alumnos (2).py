@@ -98,7 +98,7 @@ meses = []
 
 
 def monthly(accion, diccionario):
-    lista_fechas = []
+    lista_fechas_pd = []
     lista_promedios = []
     lista_fechas = str2datetime(diccionario["Date"])
     for index, fechas in enumerate(lista_fechas):
@@ -108,42 +108,65 @@ def monthly(accion, diccionario):
             lista10.append(diccionario[accion][index])
             if lista_fechas[index+1].month != 10:
                 promedio10 = sum(lista10)/len(lista10)
-        print(promedio10)
+                lista_promedios.append(promedio10)
+        if mes == 11:
+            lista11.append(diccionario[accion][index])
+            if lista_fechas[index+1].month != 11:
+                promedio11 = sum(lista11)/len(lista11)
+                lista_promedios.append(promedio11)
+        if mes == 12:
+            lista12.append(diccionario[accion][index])
+            if lista_fechas[index+1].month != 12:
+                promedio12 = sum(lista12)/len(lista12)
+                lista_promedios.append(promedio12)
+        if mes == 9:
+            lista9.append(diccionario[accion][index])
+            if lista_fechas[index+1].month != 9:
+                promedio9 = sum(lista9)/len(lista9)
+                lista_promedios.append(promedio9)
+        if mes == 8:
+            lista8.append(diccionario[accion][index])
+            if lista_fechas[index+1].month != 8:
+                promedio8 = sum(lista8)/len(lista8)
+                lista_promedios.append(promedio8)
+        if mes == 7:
+            lista7.append(diccionario[accion][index])
+            if lista_fechas[index+1].month != 7:
+                promedio7 = sum(lista7)/len(lista7)
+                lista_promedios.append(promedio7)
+        if mes == 6:
+            lista6.append(diccionario[accion][index])
+            if lista_fechas[index+1].month != 6:
+                promedio6 = sum(lista6)/len(lista6)
+                lista_promedios.append(promedio6)
+        if mes == 5:
+            lista5.append(diccionario[accion][index])
+            if lista_fechas[index+1].month != 5:
+                promedio5 = sum(lista5)/len(lista5)
+                lista_promedios.append(promedio5)
+        if mes == 4:
+            lista4.append(diccionario[accion][index])
+            if lista_fechas[index+1].month != 4:
+                promedio4 = sum(lista4)/len(lista4)
+                lista_promedios.append(promedio4)
+        if mes == 3:
+            lista3.append(diccionario[accion][index])
+            if lista_fechas[index+1].month != 3:
+                promedio3 = sum(lista3)/len(lista3)
+                lista_promedios.append(promedio3)
+        if mes == 2:
+            lista2.append(diccionario[accion][index])
+            if lista_fechas[index+1].month != 2:
+                promedio2 = sum(lista2)/len(lista2)
+                lista_promedios.append(promedio2)
+        if mes == 1:
+            lista1.append(diccionario[accion][index])
+            if lista_fechas[index+1].month != 1:
+                promedio1= sum(lista1)/len(lista1)
+                lista_promedios.append(promedio1)
 
-        # elif mes == 11:
-        #     lista11.append(diccionario[accion][index])
-        #     promedio11 = sum(lista11)/len(lista11)
-        # elif mes == 12:
-        #     lista12.append(diccionario[accion][index])
-        #     promedio12 = sum(lista12)/len(lista12)
-        # elif mes == 9:
-        #     lista9.append(diccionario[accion][index])
-        #     promedio9 = sum(lista9)/len(lista9)
-        # elif mes == 8:
-        #     lista8.append(diccionario[accion][index])
-        #     promedio8 = sum(lista8)/len(lista8)
-        # elif mes == 7:
-        #     lista12.append(diccionario[accion][index])
-        #     promedio7 = sum(lista7)/len(lista7)
-        # elif mes == 6:
-        #     lista6.append(diccionario[accion][index])
-        #     promedio6 = sum(lista6)/len(lista6)
-        # elif mes == 5:
-        #     lista5.append(diccionario[accion][index])
-        #     promedio5 = sum(lista5)/len(lista5)
-        # elif mes == 4:
-        #     lista4.append(diccionario[accion][index])
-        #     promedio4 = sum(lista4)/len(lista4)
-        # elif mes == 3:
-        #     lista3.append(diccionario[accion][index])
-        #     promedio3 = sum(lista3)/len(lista3)
-        # elif mes == 2:
-        #     lista2.append(diccionario[accion][index])
-        #     promedio2 = sum(lista2)/len(lista2)
-        # elif mes == 1:
-        #     lista1.append(diccionario[accion][index])
-        #     promedio1 = sum(lista1)/len(lista1)
-    return lista_fechas, promedio10
+        
+    return lista_fechas_pd, lista_promedios
 
 
 accion = "SATL"
