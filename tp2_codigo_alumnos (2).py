@@ -95,13 +95,16 @@ lista2 = []
 lista1 = []
 
 meses = []
-
+lista_fechas_pd = []
+lista_promedios = []
+lista_fechas = str2datetime(diccionario["Date"])
+listafechass = []
 
 def monthly(accion, diccionario):
-    lista_fechas_pd = []
-    lista_promedios = []
-    lista_fechas = str2datetime(diccionario["Date"])
-    listafechass = []
+    # lista_fechas_pd = []
+    # lista_promedios = []
+    # lista_fechas = str2datetime(diccionario["Date"])
+    # listafechass = []
 
     for index, fechas in enumerate(lista_fechas):
         #  print(index, fechas)
@@ -171,14 +174,14 @@ def monthly(accion, diccionario):
                 promedio9 = sum(lista9)/len(lista9)
                 lista_promedios.append(promedio9)
         
-    return lista_promedios, meses, listafechass 
+    return lista_promedios, listafechass 
 
 
 accion = "SATL"
 print(monthly(accion, diccionario))
 
-# with open('monthly_average_SATL.csv', 'r', encoding = 'utf-8') as file:
-#     n1= "".join(str(promedio1))
-#     n2= "".join(str(fechas))
-#     file.writelines(n1)
-#     file.writelines(n2)
+with open('monthly_average_SATL.csv', 'r', encoding = 'utf-8') as file:
+    str1= "".join(str(lista_promedios))
+    str2= "".join(str(listafechass))
+    file.writelines(str1)
+    file.writelines(str2)
