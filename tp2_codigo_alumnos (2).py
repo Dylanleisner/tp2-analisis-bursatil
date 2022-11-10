@@ -177,8 +177,8 @@ def monthly(accion, diccionario):
 accion = "SATL"
 print(monthly(accion, diccionario))
 
-# with open('monthly_average_SATL.csv', 'r', encoding = 'utf-8') as file:
-#     n1= "".join(str(promedio1))
-#     n2= "".join(str(fechas))
-#     file.writelines(n1)
-#     file.writelines(n2)
+with open('monthly_average_SATL.csv', 'r', encoding = 'utf-8') as file:
+    n1= "".join(str(monthly(accion, diccionario)))
+    # n2= "".join(str(listafechass))
+    file.writelines(n1)
+    # file.writelines(n2)
