@@ -186,4 +186,38 @@ with open("monthly_average_SATL.csv", 'w+', encoding = 'utf-8') as file2:
             linea = f"{lista_promedios[p]},{listafechass[p]}\n"
             file2.write(linea)
 
+
+
+# Mirando el historial de precios, es fácil determinar cuándo hubiera sido
+# el día ideal, en el pasado, para comprar una acción y generar la mayor
+# ganancia. Para ello se define la ganancia de una inversión como:
+# ganancia = (precio de venta - precio de compra) / precio de compra
+# 3
+
+# Escriba una función max_gain que reciba el nombre de una acción, el
+# diccionario de datos y una fecha de venta. La función debe buscar la
+# fecha de compra (en el pasado) que hubiera generado la mayor
+# ganancia. La función debe devolver esta fecha y el retorno de la
+# inversión.
+# Probar la función con la fecha del 6 de junio de 2022.
+
+def max_gain(accion, diccionario, fecha_venta):
+    lista = diccionario[accion]
+
+    fecha_venta = diccionario["Date"].index(fecha_venta)
+    fecha_ahora = diccionario["Date"][:fecha_venta]
+    precio_ahora = []
+
+    i = 0
+    while len(precio_ahora) < len(fecha_ahora):
+        if len(precio_ahora) < len(fecha_ahora):
+            precio_ahora.append(lista[i])
+        else:
+            break
+        i += 1
+
+
+def max_gain(accion, diccionario, fecha_venta)
+        
+
     
