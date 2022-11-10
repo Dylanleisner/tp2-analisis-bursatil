@@ -187,5 +187,3 @@ with open("monthly_average_SATL.csv", 'w+', encoding = 'utf-8') as file2:
             file2.write(linea)
 
     
-
-
